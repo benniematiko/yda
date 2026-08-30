@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 
 // Main Sections
 import Hero from './components/Hero';
+import WorkersForHire from './components/WorkersForHire';
 import ServicesGrid from './components/ServicesGrid';
 import BookingEngine from './components/BookingEngine';
 import B2BForm from './components/B2BForm';
@@ -27,6 +28,7 @@ function App() {
         {/* Main Content */}
         <main>
           <Hero />
+          <WorkersForHire />
           <ServicesGrid />
           <BookingEngine />
           <B2BForm />

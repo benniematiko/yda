@@ -5,13 +5,8 @@ import './WhatsAppWidget.css';
 export default function WhatsAppWidget() {
   const { lang } = useLanguage();
 
-  // Replace with your real Saudi WhatsApp number (with country code, no +)
-  const phoneNumber = '966500000000';
-  const message = lang === 'ar' 
-    ? 'مرحباً، أريد الاستفسار عن خدمات التنظيف'
-    : 'Hello, I would like to inquire about cleaning services';
-
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const phoneNumber = '966534851367';
+  const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (
     <a
