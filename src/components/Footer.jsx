@@ -28,7 +28,7 @@ export default function Footer() {
             </li>
             <li>
               <Mail size={16} />
-              <a href="mailto:info@saudicleanpro.com">info@saudicleanpro.com</a>
+              <a href="mailto:info@saudicleanpro.com">info@yadove.com</a>
             </li>
             <li>
               <MapPin size={16} />
