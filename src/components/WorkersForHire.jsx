@@ -52,10 +52,12 @@ export default function WorkersForHire() {
             <div className="workers-group">
               <h3 className="group-title">Available Nationalities</h3>
               <ul className="workers-list pill-list">
+                <li>Burundian</li>
                 <li>Kenyan</li>
                 <li>Tanzanian</li>
                 <li>Ethiopian</li>
                 <li>Ugandan</li>
+                
               </ul>
             </div>
 

@@ -1,3 +1,4 @@
+// src/components/ServicesGrid.jsx
 import { useLanguage } from '../context/LanguageContext';
 import { 
   Sparkles, 
@@ -18,10 +19,7 @@ export default function ServicesGrid() {
       titleAr: 'التنظيف',
       titleEn: 'Cleaning',
       descAr: 'تنظيف منزلي وتجاري عميق ويومي بمعايير عالية',
-      descEn: 'Deep and daily home & commercial cleaning with high standards',
-      price: 80,
-      unitAr: 'ريال / ساعة',
-      unitEn: 'SAR / hour'
+      descEn: 'Deep and daily home & commercial cleaning with high standards'
     },
     {
       id: 2,
@@ -29,10 +27,7 @@ export default function ServicesGrid() {
       titleAr: 'الطبخ',
       titleEn: 'Cooking',
       descAr: 'طهي وجبات منزلية طازجة حسب طلبك',
-      descEn: 'Fresh home-cooked meals prepared to your preference',
-      price: 100,
-      unitAr: 'ريال / ساعة',
-      unitEn: 'SAR / hour'
+      descEn: 'Fresh home-cooked meals prepared to your preference'
     },
     {
       id: 3,
@@ -40,10 +35,7 @@ export default function ServicesGrid() {
       titleAr: 'رعاية كبار السن',
       titleEn: 'Care Giving',
       descAr: 'رعاية صحية وشخصية محترفة لكبار السن',
-      descEn: 'Professional health and personal care for the elderly',
-      price: 120,
-      unitAr: 'ريال / ساعة',
-      unitEn: 'SAR / hour'
+      descEn: 'Professional health and personal care for the elderly'
     },
     {
       id: 4,
@@ -51,10 +43,7 @@ export default function ServicesGrid() {
       titleAr: 'مربيات أطفال',
       titleEn: 'Nannies',
       descAr: 'مربيات مؤهلات لرعاية الأطفال في المنزل',
-      descEn: 'Qualified nannies for full-time childcare at home',
-      price: 150,
-      unitAr: 'ريال / ساعة',
-      unitEn: 'SAR / hour'
+      descEn: 'Qualified nannies for full-time childcare at home'
     },
     {
       id: 5,
@@ -62,10 +51,7 @@ export default function ServicesGrid() {
       titleAr: 'جليسة أطفال',
       titleEn: 'Babysitting',
       descAr: 'رعاية مؤقتة وآمنة للأطفال عند الحاجة',
-      descEn: 'Safe and reliable temporary babysitting when you need it',
-      price: 90,
-      unitAr: 'ريال / ساعة',
-      unitEn: 'SAR / hour'
+      descEn: 'Safe and reliable temporary babysitting when you need it'
     }
   ];
 
@@ -86,12 +72,6 @@ export default function ServicesGrid() {
               <p className="service-desc">
                 {lang === 'ar' ? service.descAr : service.descEn}
               </p>
-              <div className="service-price">
-                <span className="price">{service.price}</span>
-                <span className="unit">
-                  {lang === 'ar' ? service.unitAr : service.unitEn}
-                </span>
-              </div>
             </div>
           ))}
         </div>
