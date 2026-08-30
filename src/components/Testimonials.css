@@ -1,0 +1,169 @@
+.testimonials-section {
+  padding-block: 5.5rem;
+  background: #ffffff;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.05rem;
+  margin-top: -1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Reviews Grid */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 4.5rem;
+}
+
+.review-card {
+  background: #f8fafc;
+  border-radius: 1.25rem;
+  padding: 1.85rem;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
+.stars {
+  display: flex;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.review-text {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+/* Client Info */
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: auto;
+}
+
+.avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e3a8a, #0f766e);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.reviewer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.name-row strong {
+  color: #1e293b;
+  font-size: 1rem;
+}
+
+.verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  background: #ecfdf5;
+  color: #047857;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+}
+
+.city {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+/* Trust Badges Section */
+.trust-section {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.trust-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 2.25rem;
+}
+
+.badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.badge {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  background: #f0fdf4;
+  color: #065f46;
+  padding: 1.1rem 1.4rem;
+  border-radius: 1rem;
+  border: 1px solid #bbf7d0;
+  text-align: start;
+  min-width: 240px;
+  max-width: 300px;
+}
+
+.badge strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+
+.badge span {
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+/* Mobile improvements */
+@media (max-width: 640px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .badges-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .badge {
+    width: 100%;
+    max-width: 340px;
+  }
+}

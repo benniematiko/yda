@@ -1,0 +1,190 @@
+.b2b-section {
+  padding-block: 5.5rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+}
+
+.b2b-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.b2b-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  margin-inline: auto;
+  margin-bottom: 1.25rem;
+  background: #1e3a8a;
+  color: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.b2b-subtitle {
+  max-width: 580px;
+  margin-inline: auto;
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-top: 0.75rem;
+}
+
+/* Form Card */
+.b2b-form {
+  max-width: 720px;
+  margin-inline: auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 40px rgba(30, 58, 138, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-group {
+  margin-bottom: 1.35rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.required {
+  color: #ef4444;
+  margin-inline-start: 0.2rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 11px;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1e3a8a;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.12);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Trust note */
+.trust-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  background: #f0fdf4;
+  color: #065f46;
+  padding: 0.9rem 1.1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #bbf7d0;
+}
+
+/* Submit Button */
+.b2b-submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: #1e3a8a;
+  color: white;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 1.05rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.b2b-submit:hover:not(:disabled) {
+  background: #1e40af;
+  transform: translateY(-2px);
+}
+
+.b2b-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Success State */
+.success-card {
+  max-width: 520px;
+  margin-inline: auto;
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(30, 58, 138, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.success-icon {
+  color: #059669;
+  margin-bottom: 1.25rem;
+}
+
+.success-card h2 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.success-card p {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.back-btn {
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 0.85rem 1.75rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: #1e40af;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .b2b-form {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .success-card {
+    padding: 2.25rem 1.5rem;
+  }
+}
