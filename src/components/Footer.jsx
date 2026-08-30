@@ -55,7 +55,7 @@ export default function Footer() {
         <div className="container">
           <p>
             © {new Date().getFullYear()} Yadove Agency. 
-            {lang === 'ar' ? ' جميع الحقوق محفوظة.' : ' All rights reserved.'}
+            {lang === 'ar' ? ' @2026 Yadove Agency' : ' All rights reserved.'}
           </p>
         </div>
       </div>
