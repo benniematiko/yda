@@ -1,0 +1,12 @@
+/* Apply Montserrat to everything */
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Or apply to body only */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

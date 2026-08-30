@@ -1,0 +1,304 @@
+/* ===== NAVBAR WITH GLASSMORPHISM EFFECT ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* Optional: Add a subtle background pattern for depth */
+.navbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #1e3a8a; /* deep royal blue */
+}
+
+.logo-image {
+  height: 100px;
+  width: 120px;
+  object-fit: contain;
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+}
+
+/* ===== DESKTOP NAVIGATION LINKS ===== */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-links a:hover {
+  color: #667eea; /* purple-blue */
+}
+
+/* Glass underline effect */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===== NAV ACTIONS (Language + Call Button) ===== */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Language Button - Glass Style */
+.lang-btn {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #1e293b;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Call Button - Glass Style */
+.call-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #1e293b;
+  padding: 0.5rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.call-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.call-btn svg {
+  color: #667eea;
+}
+
+/* ===== HAMBURGER MENU (Mobile) ===== */
+.hamburger {
+  display: none;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  color: #1e293b;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: rotate(90deg);
+}
+
+/* ===== MOBILE MENU - slides 80% from RIGHT ===== */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -80%; /* hidden off-screen to the right */
+  width: 80%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 1100;
+  padding: 5rem 2rem 2rem;
+  transition: right 0.35s ease;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.open {
+  right: 0; /* slides in */
+}
+
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-menu a {
+  font-size: 1.25rem;
+  color: #1e293b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.mobile-menu a:hover {
+  color: #667eea;
+  transform: translateX(8px);
+}
+
+/* Mobile Language Button - Glass Style */
+.lang-btn.mobile {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(102, 126, 234, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #1e293b;
+  transition: all 0.3s ease;
+}
+
+.lang-btn.mobile:hover {
+  background: rgba(102, 126, 234, 0.25);
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 1050;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+  .nav-container {
+    padding: 0.7rem 1.2rem;
+  }
+  
+  .logo-image {
+    height: 80px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links,
+  .nav-actions {
+    display: none;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  .nav-container {
+    padding: 0.6rem 1rem;
+  }
+  
+  .logo-image {
+    height: 60px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0.5rem 0.8rem;
+  }
+  
+  .logo-image {
+    height: 50px;
+    width: 65px;
+  }
+  
+  .mobile-menu {
+    width: 85%;
+    right: -85%;
+    padding: 4rem 1.5rem 2rem;
+  }
+  
+  .mobile-menu a {
+    font-size: 1.1rem;
+  }
+}
