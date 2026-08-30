@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container footer-content">
         {/* Brand */}
         <div className="footer-brand">
-          <h3>Saudi Clean Pro</h3>
+          <h3>Yadove Agency</h3>
           <p>
             {lang === 'ar'
               ? 'نظافة فاخرة… ثقة سعودية'
@@ -54,7 +54,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container">
           <p>
-            © {new Date().getFullYear()} Saudi Clean Pro. 
+            © {new Date().getFullYear()} Yadove Agency. 
             {lang === 'ar' ? ' جميع الحقوق محفوظة.' : ' All rights reserved.'}
           </p>
         </div>

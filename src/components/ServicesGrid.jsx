@@ -1,44 +1,71 @@
 import { useLanguage } from '../context/LanguageContext';
-import { Home, Building2, Sparkles } from 'lucide-react';
+import { 
+  Sparkles, 
+  ChefHat, 
+  HeartHandshake, 
+  Users, 
+  Baby 
+} from 'lucide-react';
 import './ServicesGrid.css';
 
 export default function ServicesGrid() {
-  const { lang, t } = useLanguage();
+  const { lang } = useLanguage();
 
-  // Service data (prices in SAR)
   const services = [
     {
       id: 1,
-      icon: <Home size={32} />,
-      titleAr: 'خدمة خادمة بالساعة',
-      titleEn: 'Hourly Maid Service',
-      descAr: 'تنظيف يومي مرن حسب احتياجك',
-      descEn: 'Flexible daily cleaning as needed',
+      icon: <Sparkles size={32} />,
+      titleAr: 'التنظيف',
+      titleEn: 'Cleaning',
+      descAr: 'تنظيف منزلي وتجاري عميق ويومي بمعايير عالية',
+      descEn: 'Deep and daily home & commercial cleaning with high standards',
       price: 80,
       unitAr: 'ريال / ساعة',
       unitEn: 'SAR / hour'
     },
     {
       id: 2,
-      icon: <Sparkles size={32} />,
-      titleAr: 'تنظيف عميق',
-      titleEn: 'Deep Cleaning',
-      descAr: 'تنظيف شامل للمطبخ والحمامات والأرضيات',
-      descEn: 'Full deep clean for kitchen, bathrooms & floors',
-      price: 450,
-      unitAr: 'ريال / زيارة',
-      unitEn: 'SAR / visit'
+      icon: <ChefHat size={32} />,
+      titleAr: 'الطبخ',
+      titleEn: 'Cooking',
+      descAr: 'طهي وجبات منزلية طازجة حسب طلبك',
+      descEn: 'Fresh home-cooked meals prepared to your preference',
+      price: 100,
+      unitAr: 'ريال / ساعة',
+      unitEn: 'SAR / hour'
     },
     {
       id: 3,
-      icon: <Building2 size={32} />,
-      titleAr: 'تعقيم تجاري',
-      titleEn: 'Commercial Sanitation',
-      descAr: 'تعقيم مكاتب ومدارس ومولات',
-      descEn: 'Sanitation for offices, schools & malls',
-      price: 1200,
-      unitAr: 'ريال / يوم',
-      unitEn: 'SAR / day'
+      icon: <HeartHandshake size={32} />,
+      titleAr: 'رعاية كبار السن',
+      titleEn: 'Care Giving',
+      descAr: 'رعاية صحية وشخصية محترفة لكبار السن',
+      descEn: 'Professional health and personal care for the elderly',
+      price: 120,
+      unitAr: 'ريال / ساعة',
+      unitEn: 'SAR / hour'
+    },
+    {
+      id: 4,
+      icon: <Users size={32} />,
+      titleAr: 'مربيات أطفال',
+      titleEn: 'Nannies',
+      descAr: 'مربيات مؤهلات لرعاية الأطفال في المنزل',
+      descEn: 'Qualified nannies for full-time childcare at home',
+      price: 150,
+      unitAr: 'ريال / ساعة',
+      unitEn: 'SAR / hour'
+    },
+    {
+      id: 5,
+      icon: <Baby size={32} />,
+      titleAr: 'جليسة أطفال',
+      titleEn: 'Babysitting',
+      descAr: 'رعاية مؤقتة وآمنة للأطفال عند الحاجة',
+      descEn: 'Safe and reliable temporary babysitting when you need it',
+      price: 90,
+      unitAr: 'ريال / ساعة',
+      unitEn: 'SAR / hour'
     }
   ];
 
