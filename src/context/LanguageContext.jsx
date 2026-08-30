@@ -1,45 +1,30 @@
-import { createContext, useState, useContext, useEffect } from 'react';
+import { createContext, useState, useContext } from 'react';
 
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-  // Start with Arabic because we are in Saudi Arabia
-  const [lang, setLang] = useState('ar'); // 'ar' or 'en'
+  // Fixed to English only
+  const [lang] = useState('en');
 
-  // Whenever language changes, flip the whole page direction
-  useEffect(() => {
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.lang = lang;
-  }, [lang]);
+  // Set page direction and language to English
+  document.documentElement.dir = 'ltr';
+  document.documentElement.lang = 'en';
 
-  const toggleLanguage = () => {
-    setLang(prev => (prev === 'ar' ? 'en' : 'ar'));
-  };
+  // No toggle function needed
 
-  // Simple dictionary (we will grow this later)
+  // Simple dictionary - English only
   const t = {
-    ar: {
-      bookNow: 'احجز الآن',
-      services: 'خدماتنا',
-      home: 'الرئيسية',
-      about: 'من نحن',
-      contact: 'تواصل معنا',
-      whatsapp: 'واتساب',
-      call: 'اتصل الآن',
-    },
-    en: {
-      bookNow: 'Book Now',
-      services: 'Our Services',
-      home: 'Home',
-      about: 'About Us',
-      contact: 'Contact',
-      whatsapp: 'WhatsApp',
-      call: 'Call Now',
-    }
+    bookNow: 'Book Now',
+    services: 'Our Services',
+    home: 'Home',
+    about: 'About Us',
+    contact: 'Contact',
+    whatsapp: 'WhatsApp',
+    call: 'Call Now',
   };
 
   return (
-    <LanguageContext.Provider value={{ lang, toggleLanguage, t: t[lang] }}>
+    <LanguageContext.Provider value={{ lang, t }}>
       {children}
     </LanguageContext.Provider>
   );
