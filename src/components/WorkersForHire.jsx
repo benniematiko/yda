@@ -1,5 +1,6 @@
 // src/components/WorkersForHire.jsx
 import { useLanguage } from '../context/LanguageContext';
+import { CheckCircle2 } from 'lucide-react';
 import './WorkersForHire.css';
 
 export default function WorkersForHire() {
@@ -32,17 +33,35 @@ export default function WorkersForHire() {
           </p>
 
           <div className="workers-payment-note">
-            <strong>Payment Terms:</strong> Payment is due upon completion of the work.
+            <strong className="payment-label">Payment Terms:</strong> Payment is due upon completion of the work.
           </div>
 
           {/* Pricing Grid */}
           <div className="workers-group">
             <h3 className="group-title">Cleaning Services</h3>
             <ul className="workers-list pricing-list">
-              <li><span>Cleaning session</span> <strong>25 SAR / session</strong></li>
-              <li><span>Full day (24 hours)</span> <strong>200 SAR</strong> <small>(staying at home)</small></li>
-              <li><span>Two days</span> <strong>350 SAR</strong> <small>(staying at home)</small></li>
-              <li><span>Five days</span> <strong>550 SAR</strong> <small>(staying at home)</small></li>
+              <li>
+                <span className="service-name">Cleaning session</span> 
+                <strong className="price-tag">25 SAR <small>/ session</small></strong>
+              </li>
+              <li>
+                <span className="service-name">
+                  Full day (24 hours) <small className="duration-note">(staying at home)</small>
+                </span> 
+                <strong className="price-tag">200 SAR</strong>
+              </li>
+              <li>
+                <span className="service-name">
+                  Two days <small className="duration-note">(staying at home)</small>
+                </span> 
+                <strong className="price-tag">350 SAR</strong>
+              </li>
+              <li>
+                <span className="service-name">
+                  Five days <small className="duration-note">(staying at home)</small>
+                </span> 
+                <strong className="price-tag">550 SAR</strong>
+              </li>
             </ul>
             <p className="disclaimer">* Prices do not include delivery.</p>
           </div>
@@ -57,17 +76,16 @@ export default function WorkersForHire() {
                 <li>Tanzanian</li>
                 <li>Ethiopian</li>
                 <li>Ugandan</li>
-                
               </ul>
             </div>
 
             <div className="workers-group">
               <h3 className="group-title">Why Choose Us</h3>
               <ul className="workers-list check-list">
-                <li>✓ Experienced & trained staff</li>
-                <li>✓ Available 24/7</li>
-                <li>✓ Competitive rates</li>
-                <li>✓ Fully insured</li>
+                <li><CheckCircle2 size={16} className="check-icon" /> Experienced & trained staff</li>
+                <li><CheckCircle2 size={16} className="check-icon" /> Available 24/7</li>
+                <li><CheckCircle2 size={16} className="check-icon" /> Competitive rates</li>
+                <li><CheckCircle2 size={16} className="check-icon" /> Fully insured</li>
               </ul>
             </div>
           </div>

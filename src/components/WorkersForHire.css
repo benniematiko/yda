@@ -1,8 +1,8 @@
 /* src/components/WorkersForHire.css */
 
 .workers-section {
-  padding: 40px 20px;
-  background-color: #f8f9fa;
+  padding: 60px 20px;
+  background-color: #f8fafc;
 }
 
 .workers-container {
@@ -25,9 +25,9 @@
   height: auto;
   min-height: 480px;
   object-fit: cover;
-  border-radius: 0; /* Corner rounding removed */
+  border-radius: 0;
   display: block;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
 }
 
 /* Left Floating Contact Badge Overlay */
@@ -35,10 +35,10 @@
   position: absolute;
   top: 30px;
   left: -20px;
-  background-color: #007bff;
+  background-color: #1e3a8a;
   color: #ffffff;
   padding: 12px 20px;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.25);
   z-index: 2;
   border-radius: 0;
 }
@@ -48,7 +48,8 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  opacity: 0.9;
+  color: #93c5fd;
+  font-weight: 600;
 }
 
 .badge-phone {
@@ -61,7 +62,7 @@
 }
 
 .badge-phone:hover {
-  text-decoration: underline;
+  color: #e0f2fe;
 }
 
 /* Right side - Content Layout */
@@ -70,37 +71,75 @@
 }
 
 .workers-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a1a1a;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #1e3a8a; /* Primary Deep Blue */
   line-height: 1.25;
   margin: 0 0 10px 0;
 }
 
 .workers-description {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #475569; /* Slate Gray */
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .workers-payment-note {
-  background-color: #eef5ff;
-  border-left: 4px solid #007bff;
-  padding: 8px 12px;
+  background-color: #eff6ff;
+  border-left: 4px solid #1e3a8a;
+  padding: 10px 14px;
   font-size: 0.9rem;
-  color: #1e3a8a;
-  margin-bottom: 20px;
+  color: #1e293b;
+  margin-bottom: 24px;
 }
 
+.payment-label {
+  color: #1e3a8a;
+  font-weight: 700;
+}
+/* 
 .group-title {
   font-size: 0.95rem;
-  font-weight: 700;
-  color: #222;
+  font-weight: 800;
+  color: #0f172a;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin: 0 0 8px 0;
+  letter-spacing: 0.6px;
+  margin: 0 0 12px 0;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 4px;
+} */
+
+
+/* Update the general group title styling */
+.group-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1e3a8a; /* Primary Deep Blue */
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin: 0 0 12px 0;
+  border-bottom: 2px solid #0284c7; /* Vibrant Accent Blue Line */
+  padding-bottom: 4px;
 }
+
+/* Optional: Custom distinct color accents for each header */
+
+/* Available Nationalities Header Accent */
+.workers-info-grid .workers-group:nth-child(1) .group-title {
+  color: #1e3a8a; /* Deep Blue */
+  border-bottom-color: #0284c7; /* Sky/Accent Blue Underline */
+}
+
+/* Why Choose Us Header Accent */
+.workers-info-grid .workers-group:nth-child(2) .group-title {
+  color: #0f172a; /* Dark Navy Slate */
+  border-bottom-color: #10b981; /* Emerald Green Underline for benefits/trust */
+}
+
+
+
+
 
 /* Pricing Section */
 .pricing-list {
@@ -113,21 +152,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 0;
-  border-bottom: 1px dashed #e2e8f0;
+  padding: 10px 0;
+  border-bottom: 1px dashed #cbd5e1;
   font-size: 0.95rem;
 }
 
-.pricing-list small {
-  color: #666;
-  font-weight: normal;
+.service-name {
+  color: #334155;
+  font-weight: 600;
+}
+
+.duration-note {
+  color: #64748b;
+  font-weight: 400;
+  font-size: 0.85rem;
+  margin-left: 4px;
+}
+
+.price-tag {
+  color: #0284c7; /* Vibrant Accent Blue */
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.price-tag small {
   font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 500;
 }
 
 .disclaimer {
   font-size: 0.8rem;
-  color: #777;
-  margin: 6px 0 20px 0;
+  color: #94a3b8;
+  margin: 8px 0 24px 0;
   font-style: italic;
 }
 
@@ -135,7 +192,7 @@
 .workers-info-grid {
   display: flex;
   gap: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .workers-info-grid .workers-group {
@@ -148,43 +205,56 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
 }
 
 .pill-list li {
-  background-color: #e9ecef;
-  color: #333;
-  padding: 4px 10px;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+  padding: 5px 12px;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .check-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .check-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 0.9rem;
-  color: #444;
-  padding: 2px 0;
+  color: #334155;
+  font-weight: 500;
+}
+
+.check-icon {
+  color: #0284c7;
+  flex-shrink: 0;
 }
 
 /* Call to Action */
 .workers-cta {
   display: inline-block;
-  padding: 12px 32px;
-  background-color: #007bff;
+  padding: 12px 36px;
+  background-color: #1e3a8a;
   color: #ffffff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 0;
-  transition: background-color 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
 }
 
 .workers-cta:hover {
-  background-color: #0056b3;
+  opacity: 0.92;
 }
 
 /* Responsive adjustments */
@@ -210,6 +280,6 @@
 
   .workers-info-grid {
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
   }
 }
