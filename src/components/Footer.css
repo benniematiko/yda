@@ -1,3 +1,5 @@
+/* src/components/Footer.css */
+
 .footer {
   background: #0f172a; /* very dark blue */
   color: #e2e8f0;
@@ -11,18 +13,27 @@
   padding-block: 3.5rem;
 }
 
-.footer-brand h3 {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: white;
+/* ===== BRAND & LOGO STYLING ===== */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
   margin-bottom: 0.75rem;
 }
 
 .footer-brand p {
   color: #94a3b8;
   font-size: 0.95rem;
+  margin: 0;
 }
 
+/* ===== CONTACT & LINKS ===== */
 .footer-contact h4,
 .footer-links h4 {
   color: white;
@@ -37,6 +48,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-contact li {
@@ -59,6 +72,7 @@
   color: #10b981; /* emerald */
 }
 
+/* ===== BOTTOM BAR ===== */
 .footer-bottom {
   border-top: 1px solid #1e293b;
   padding-block: 1.25rem;

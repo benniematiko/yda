@@ -1,3 +1,4 @@
+// src/components/Footer.jsx
 import { useLanguage } from '../context/LanguageContext';
 import { Phone, MapPin, Mail } from 'lucide-react';
 import './Footer.css';
@@ -10,7 +11,13 @@ export default function Footer() {
       <div className="container footer-content">
         {/* Brand */}
         <div className="footer-brand">
-          <h3>Yadove Agency</h3>
+          <a href="/">
+            <img 
+              src="/yadove__white.png" 
+              alt="Yadove Agency Logo" 
+              className="footer-logo" 
+            />
+          </a>
           <p>
             {lang === 'ar'
               ? 'نظافة فاخرة… ثقة سعودية'
@@ -24,11 +31,11 @@ export default function Footer() {
           <ul>
             <li>
               <Phone size={16} />
-              <a href="tel:+966500000000">+966 53 4851 367</a>
+              <a href="tel:+966534851367">+966 53 4851 367</a>
             </li>
             <li>
               <Mail size={16} />
-              <a href="mailto:info@saudicleanpro.com">info@yadove.com</a>
+              <a href="mailto:info@yadove.com">info@yadove.com</a>
             </li>
             <li>
               <MapPin size={16} />
@@ -55,7 +62,7 @@ export default function Footer() {
         <div className="container">
           <p>
             © {new Date().getFullYear()} Yadove Agency. 
-            {lang === 'ar' ? ' @2026 Yadove Agency' : ' All rights reserved.'}
+            {lang === 'ar' ? ' جميع الحقوق محفوظة.' : ' All rights reserved.'}
           </p>
         </div>
       </div>

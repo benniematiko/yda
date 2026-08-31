@@ -19,7 +19,7 @@ export default function ServicesGrid() {
       titleAr: 'التنظيف',
       titleEn: 'Cleaning',
       descAr: 'تنظيف منزلي وتجاري عميق ويومي بمعايير عالية',
-      descEn: 'Deep and daily home & commercial cleaning with high standards'
+      descEn: 'Our dedicated cleaning team ensures every corner of your home or workplace sparkles with cleanliness. From routine cleaning to deep cleaning, we\'ve got you covered.'
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ export default function ServicesGrid() {
       titleAr: 'الطبخ',
       titleEn: 'Cooking',
       descAr: 'طهي وجبات منزلية طازجة حسب طلبك',
-      descEn: 'Fresh home-cooked meals prepared to your preference'
+      descEn: 'Enjoy delicious, home-cooked meals without the hassle. Our expert cooks prepare nutritious and mouthwatering dishes tailored to your preferences.'
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ export default function ServicesGrid() {
       titleAr: 'رعاية كبار السن',
       titleEn: 'Care Giving',
       descAr: 'رعاية صحية وشخصية محترفة لكبار السن',
-      descEn: 'Professional health and personal care for the elderly'
+      descEn: 'We provide compassionate care for your loved ones, offering support, companionship, and assistance with daily tasks to improve their quality of life.'
     },
     {
       id: 4,
@@ -43,7 +43,7 @@ export default function ServicesGrid() {
       titleAr: 'مربيات أطفال',
       titleEn: 'Nannies',
       descAr: 'مربيات مؤهلات لرعاية الأطفال في المنزل',
-      descEn: 'Qualified nannies for full-time childcare at home'
+      descEn: 'Trust our experienced nannies to care for your children with love and attention. We ensure a safe and nurturing environment for your little ones.'
     },
     {
       id: 5,
@@ -51,7 +51,7 @@ export default function ServicesGrid() {
       titleAr: 'جليسة أطفال',
       titleEn: 'Babysitting',
       descAr: 'رعاية مؤقتة وآمنة للأطفال عند الحاجة',
-      descEn: 'Safe and reliable temporary babysitting when you need it'
+      descEn: 'When you need a trustworthy babysitter for a few hours or an evening out, count on us. Your child\'s safety and happiness are our top priorities.'
     }
   ];
 
